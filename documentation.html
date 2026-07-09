@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Documentation — Eva</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0d0f;--panel:#141518;--border:#26282e;--text:#eceef1;--muted:#8b8f98}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;min-height:100vh;line-height:1.7}
+.wrap{max-width:820px;margin:0 auto;padding:48px 20px}
+.brand{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:700;margin-bottom:8px}
+.logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#2a2d33,#17181b);border:1px solid var(--border);display:grid;place-items:center}
+.sub{color:var(--muted);font-size:14px;margin-bottom:28px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:32px}
+h1{font-size:26px;margin-bottom:4px}
+h2{font-size:16px;margin-top:22px;margin-bottom:6px}
+h2:first-of-type{margin-top:0}
+p{color:#c3c6cd;font-size:14px}
+a{color:var(--text)}
+code{background:#1a1c20;border:1px solid var(--border);border-radius:6px;padding:2px 6px;font-size:.9em}
+.nav{margin-bottom:20px;font-size:14px}
+.nav a{color:var(--muted);text-decoration:none;margin-right:16px}
+.nav a:hover{color:var(--text)}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:32px}
+.step{display:flex;gap:14px;margin-top:14px}
+.num{width:28px;height:28px;border-radius:50%;background:#1a1c20;border:1px solid var(--border);display:grid;place-items:center;font-size:13px;font-weight:600;flex-shrink:0}
+.kbd{background:#1a1c20;border:1px solid var(--border);border-radius:6px;padding:2px 8px;font-size:.9em;font-family:Consolas,monospace}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+th{text-align:left;color:var(--muted);font-weight:500;padding:8px;border-bottom:1px solid var(--border)}
+td{padding:8px;border-bottom:1px solid var(--border);color:#c3c6cd}
+h3{font-size:14px;margin-top:16px;color:var(--text)}
+</style>
+</head>
+<body><div class="wrap">
+<div class="brand"><div class="logo">E</div>Eva</div>
+<div class="sub">Système professionnel de tickets Discord</div>
+<div class="nav"><a href="index.html">Accueil</a><a href="documentation.html">Documentation</a><a href="terms.html">Conditions d'utilisation</a><a href="privacy.html">Politique de confidentialité</a><a href="https://discord.gg/deGVPvnCpA" target="_blank" rel="noopener">Support</a></div>
+
+<div class="card">
+<h1>Documentation</h1>
+<p>Tout ce qu'il faut savoir pour utiliser Eva, que vous soyez membre, staff ou administrateur.</p>
+
+<h2>🎟️ Ouvrir un ticket (membres)</h2>
+<div class="step"><div class="num">1</div><p>Rendez-vous dans le salon du panel de tickets du serveur.</p></div>
+<div class="step"><div class="num">2</div><p>Choisissez une catégorie dans le menu déroulant (ou cliquez sur le bouton correspondant).</p></div>
+<div class="step"><div class="num">3</div><p>Remplissez le formulaire qui s'ouvre (la raison est obligatoire, 10 caractères minimum).</p></div>
+<div class="step"><div class="num">4</div><p>Un salon privé est créé pour vous : seuls vous et le staff pouvez le voir. Vous recevez aussi un message privé avec le lien direct.</p></div>
+<p style="margin-top:12px">À la fermeture de votre ticket, Eva vous demande en message privé une note de 1 à 5 ⭐ — elle aide le serveur à améliorer son support.</p>
+
+<h2>🛠️ Gérer un ticket (staff)</h2>
+<p>Chaque ticket affiche deux rangées de boutons :</p>
+<table>
+<tr><th>Bouton</th><th>Effet</th></tr>
+<tr><td>🙋 Claim / ↩️ Unclaim</td><td>Prendre (ou rendre) la responsabilité du ticket. Le nom du staff apparaît dans le ticket et les statistiques.</td></tr>
+<tr><td>✏️ Renommer</td><td>Changer le nom du salon du ticket.</td></tr>
+<tr><td>➕ / ➖ Membre</td><td>Ajouter ou retirer une personne du ticket (par ID Discord).</td></tr>
+<tr><td>🔒 Fermer</td><td>Ferme le ticket : l'auteur n'y a plus accès, la transcription est archivée et la demande d'avis est envoyée. L'auteur peut aussi fermer son propre ticket.</td></tr>
+<tr><td>🔓 Réouvrir</td><td>Rouvre un ticket fermé.</td></tr>
+<tr><td>📄 Transcription</td><td>Génère un fichier HTML de toute la conversation et l'envoie dans le salon de logs.</td></tr>
+<tr><td>🗑️ Supprimer</td><td>Archive la transcription puis supprime le salon après 5 secondes.</td></tr>
+</table>
+<h3>Commandes staff</h3>
+<p><span class="kbd">/note ajouter</span> — enregistre une note interne, invisible pour l'auteur du ticket.<br>
+<span class="kbd">/note liste</span> — affiche les notes du ticket (visible uniquement par vous).</p>
+
+<h2>⚙️ Configurer Eva (administrateurs)</h2>
+<div class="step"><div class="num">1</div><p>Connectez-vous au Dashboard avec Discord, choisissez votre serveur.</p></div>
+<div class="step"><div class="num">2</div><p><b>Catégories</b> : créez vos types de tickets (nom, emoji, couleur, rôles staff autorisés, catégorie Discord, message d'accueil, formulaire personnalisé jusqu'à 5 champs).</p></div>
+<div class="step"><div class="num">3</div><p><b>Panels</b> : créez un ou plusieurs panels (menu ou boutons, compteur en direct, catégories affichées).</p></div>
+<div class="step"><div class="num">4</div><p><b>Logs</b> : choisissez un salon pour chaque événement (ouverture, fermeture, claim, transcription…).</p></div>
+<div class="step"><div class="num">5</div><p><b>Paramètres</b> : langue (fr/en), couleurs, footer, DM de bienvenue, système d'avis, fermeture automatique des tickets inactifs, rôles gestionnaires.</p></div>
+<div class="step"><div class="num">6</div><p>Sur Discord, tapez <span class="kbd">/panel</span> dans le salon voulu pour publier le panel.</p></div>
+
+<h2>❓ FAQ</h2>
+<h3>Je ne peux pas ouvrir un deuxième ticket</h3>
+<p>Un seul ticket ouvert par catégorie et par personne. Fermez le premier ou utilisez-le.</p>
+<h3>Le staff n'est pas notifié</h3>
+<p>Vérifiez que les bons rôles sont définis dans la catégorie (Dashboard → Catégories → Modifier → Rôles autorisés).</p>
+<h3>Mon ticket s'est fermé tout seul</h3>
+<p>Le serveur a activé la fermeture automatique des tickets inactifs. Rouvrez un ticket si besoin.</p>
+<h3>Je n'ai pas reçu le DM d'avis</h3>
+<p>Vos messages privés sont probablement fermés pour ce serveur (Paramètres Discord → Confidentialité).</p>
+<h3>Où trouver les transcriptions ?</h3>
+<p>Dans le salon de logs configuré (fichier HTML) et dans le Dashboard, onglet Tickets → « Voir ».</p>
+
+<h2>💬 Besoin d'aide ?</h2>
+<p>Rejoignez le <a href="https://discord.gg/deGVPvnCpA" target="_blank" rel="noopener">serveur de support Eva</a>.</p>
+</div>
+<footer>Eva • Système de tickets — dernière mise à jour : juillet 2026</footer></div></body></html>
