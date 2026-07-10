@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Documentation — Eva</title>
@@ -36,46 +36,46 @@ footer{text-align:center;color:var(--muted);font-size:12px;margin-top:32px}
 </head>
 <body><div class="wrap">
 <div class="brand"><div class="logo">E</div>Eva</div>
-<div class="sub">Système professionnel de tickets Discord</div>
-<div class="nav"><a href="index.html">Accueil</a><a href="documentation.html">Documentation</a><a href="terms.html">Conditions d'utilisation</a><a href="privacy.html">Politique de confidentialité</a><a href="https://discord.gg/deGVPvnCpA" target="_blank" rel="noopener">Support</a></div>
-<div class="langs">🌐 <a href="documentation.html" class="on">FR</a> <a href="documentation-en.html" class="">EN</a> <a href="documentation-es.html" class="">ES</a> <a href="documentation-de.html" class="">DE</a> <a href="documentation-it.html" class="">IT</a> <a href="documentation-pt.html" class="">PT</a> <a href="documentation-nl.html" class="">NL</a> <a href="documentation-pl.html" class="">PL</a> <a href="documentation-ru.html" class="">RU</a> <a href="documentation-tr.html" class="">TR</a></div>
+<div class="sub">Professional Discord ticket system</div>
+<div class="nav"><a href="index.html">Home</a><a href="documentation.html">Documentation</a><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="https://discord.gg/deGVPvnCpA" target="_blank" rel="noopener">Support</a></div>
+<div class="langs">🌐 <a href="documentation.html" class="on">EN</a> <a href="documentation-fr.html" class="">FR</a> <a href="documentation-es.html" class="">ES</a> <a href="documentation-de.html" class="">DE</a> <a href="documentation-it.html" class="">IT</a> <a href="documentation-pt.html" class="">PT</a> <a href="documentation-nl.html" class="">NL</a> <a href="documentation-pl.html" class="">PL</a> <a href="documentation-ru.html" class="">RU</a> <a href="documentation-tr.html" class="">TR</a></div>
 <div class="card">
 <h1>Documentation</h1>
-<p>Tout ce qu'il faut savoir pour utiliser Eva, que vous soyez membre, staff ou administrateur.</p>
-<h2>🎟️ Ouvrir un ticket (membres)</h2>
-<div class="step"><div class="num">1</div><p>Rendez-vous dans le salon du panel de tickets du serveur.</p></div>
-<div class="step"><div class="num">2</div><p>Choisissez une catégorie dans le menu déroulant (ou cliquez sur le bouton correspondant).</p></div>
-<div class="step"><div class="num">3</div><p>Remplissez le formulaire qui s'ouvre (la raison est obligatoire, 10 caractères minimum).</p></div>
-<div class="step"><div class="num">4</div><p>Un salon privé est créé pour vous : seuls vous et le staff pouvez le voir. Vous recevez aussi un message privé avec le lien direct.</p></div>
-<p style="margin-top:12px">À la fermeture de votre ticket, Eva vous demande en message privé une note de 1 à 5 ⭐.</p>
-<h2>🛠️ Gérer un ticket (staff)</h2>
+<p>Everything you need to know to use Eva, whether you're a member, staff or administrator.</p>
+<h2>🎟️ Opening a ticket (members)</h2>
+<div class="step"><div class="num">1</div><p>Go to the server's ticket panel channel.</p></div>
+<div class="step"><div class="num">2</div><p>Pick a category from the dropdown menu (or click the matching button).</p></div>
+<div class="step"><div class="num">3</div><p>Fill in the form that opens (the reason is required, 10 characters minimum).</p></div>
+<div class="step"><div class="num">4</div><p>A private channel is created for you: only you and the staff can see it. You also receive a DM with the direct link.</p></div>
+<p style="margin-top:12px">When your ticket is closed, Eva asks you in DM for a 1 to 5 ⭐ rating.</p>
+<h2>🛠️ Managing a ticket (staff)</h2>
 <table>
-<tr><th>Bouton</th><th>Effet</th></tr>
-<tr><td>🙋 Claim / ↩️ Unclaim</td><td>Prendre (ou rendre) la responsabilité du ticket.</td></tr>
-<tr><td>✏️ Renommer</td><td>Changer le nom du salon du ticket.</td></tr>
-<tr><td>➕ / ➖ Membre</td><td>Ajouter ou retirer une personne du ticket (par ID Discord).</td></tr>
-<tr><td>🔒 Fermer</td><td>Ferme le ticket : transcription archivée, demande d'avis envoyée. L'auteur peut aussi fermer son propre ticket.</td></tr>
-<tr><td>🔓 Réouvrir</td><td>Rouvre un ticket fermé.</td></tr>
-<tr><td>📄 Transcription</td><td>Génère un fichier HTML de la conversation et l'envoie dans les logs.</td></tr>
-<tr><td>🗑️ Supprimer</td><td>Archive la transcription puis supprime le salon.</td></tr>
+<tr><th>Button</th><th>Effect</th></tr>
+<tr><td>🙋 Claim / ↩️ Unclaim</td><td>Take (or release) responsibility for the ticket.</td></tr>
+<tr><td>✏️ Rename</td><td>Change the ticket channel's name.</td></tr>
+<tr><td>➕ / ➖ Member</td><td>Add or remove someone from the ticket (by Discord ID).</td></tr>
+<tr><td>🔒 Close</td><td>Closes the ticket: transcript archived, review request sent. The author can also close their own ticket.</td></tr>
+<tr><td>🔓 Reopen</td><td>Reopens a closed ticket.</td></tr>
+<tr><td>📄 Transcript</td><td>Generates an HTML file of the conversation and sends it to the logs.</td></tr>
+<tr><td>🗑️ Delete</td><td>Archives the transcript then deletes the channel.</td></tr>
 </table>
-<h3>Commandes staff</h3>
-<p><span class="kbd">/note ajouter</span> — note interne invisible pour l'auteur du ticket.<br>
-<span class="kbd">/note liste</span> — affiche les notes du ticket.</p>
-<h2>⚙️ Configurer Eva (administrateurs)</h2>
-<div class="step"><div class="num">1</div><p>Connectez-vous au Dashboard avec Discord et choisissez votre serveur.</p></div>
-<div class="step"><div class="num">2</div><p><b>Catégories</b> : types de tickets (nom, emoji, couleur, rôles staff, formulaire personnalisé jusqu'à 5 champs).</p></div>
-<div class="step"><div class="num">3</div><p><b>Panels</b> : un ou plusieurs panels (menu ou boutons, compteur en direct).</p></div>
-<div class="step"><div class="num">4</div><p><b>Logs</b> : un salon par type d'événement.</p></div>
-<div class="step"><div class="num">5</div><p><b>Paramètres</b> : langue, couleurs, DM de bienvenue, avis, fermeture automatique, rôles gestionnaires.</p></div>
-<div class="step"><div class="num">6</div><p>Tapez <span class="kbd">/panel</span> dans le salon voulu pour publier le panel.</p></div>
+<h3>Staff commands</h3>
+<p><span class="kbd">/note ajouter</span> — internal note invisible to the ticket author.<br>
+<span class="kbd">/note liste</span> — shows the ticket's notes.</p>
+<h2>⚙️ Configuring Eva (administrators)</h2>
+<div class="step"><div class="num">1</div><p>Log in to the Dashboard with Discord and pick your server.</p></div>
+<div class="step"><div class="num">2</div><p><b>Categories</b>: ticket types (name, emoji, color, staff roles, custom form with up to 5 fields).</p></div>
+<div class="step"><div class="num">3</div><p><b>Panels</b>: one or more panels (menu or buttons, live counter).</p></div>
+<div class="step"><div class="num">4</div><p><b>Logs</b>: one channel per event type.</p></div>
+<div class="step"><div class="num">5</div><p><b>Settings</b>: language, colors, welcome DM, reviews, auto-close, manager roles.</p></div>
+<div class="step"><div class="num">6</div><p>Type <span class="kbd">/panel</span> in the desired channel to publish the panel.</p></div>
 <h2>❓ FAQ</h2>
-<h3>Je ne peux pas ouvrir un deuxième ticket</h3><p>Un seul ticket ouvert par catégorie et par personne.</p>
-<h3>Le staff n'est pas notifié</h3><p>Vérifiez les rôles autorisés de la catégorie dans le Dashboard.</p>
-<h3>Mon ticket s'est fermé tout seul</h3><p>Le serveur a activé la fermeture automatique des tickets inactifs.</p>
-<h3>Je n'ai pas reçu le DM d'avis</h3><p>Vos messages privés sont probablement fermés pour ce serveur.</p>
-<h3>Où trouver les transcriptions ?</h3><p>Dans le salon de logs (fichier HTML) et dans le Dashboard, onglet Tickets.</p>
-<h2>💬 Besoin d'aide ?</h2><p>Rejoignez le <a href="https://discord.gg/deGVPvnCpA" target="_blank" rel="noopener">serveur de support Eva</a>.</p>
+<h3>I can't open a second ticket</h3><p>Only one open ticket per category per person.</p>
+<h3>Staff aren't notified</h3><p>Check the category's allowed roles in the Dashboard.</p>
+<h3>My ticket closed by itself</h3><p>The server enabled automatic closing of inactive tickets.</p>
+<h3>I didn't receive the review DM</h3><p>Your DMs are probably closed for this server.</p>
+<h3>Where are the transcripts?</h3><p>In the logs channel (HTML file) and in the Dashboard, Tickets tab.</p>
+<h2>💬 Need help?</h2><p>Join the <a href="https://discord.gg/deGVPvnCpA" target="_blank" rel="noopener">Eva support server</a>.</p>
 </div>
-<footer>Eva • Système de tickets — dernière mise à jour : juillet 2026</footer>
+<footer>Eva • Ticket system — last updated: July 2026</footer>
 </div></body></html>
