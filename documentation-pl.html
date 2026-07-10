@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dokumentacja — Eva</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0d0f;--panel:#141518;--border:#26282e;--text:#eceef1;--muted:#8b8f98}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;min-height:100vh;line-height:1.7}
+.wrap{max-width:820px;margin:0 auto;padding:48px 20px}
+.brand{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:700;margin-bottom:8px}
+.logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#2a2d33,#17181b);border:1px solid var(--border);display:grid;place-items:center}
+.sub{color:var(--muted);font-size:14px;margin-bottom:16px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:32px}
+h1{font-size:26px;margin-bottom:4px}
+h2{font-size:16px;margin-top:22px;margin-bottom:6px}
+h3{font-size:14px;margin-top:16px;color:var(--text)}
+p{color:#c3c6cd;font-size:14px}
+a{color:var(--text)}
+code,.kbd{background:#1a1c20;border:1px solid var(--border);border-radius:6px;padding:2px 6px;font-size:.9em}
+.nav{margin-bottom:10px;font-size:14px}
+.nav a{color:var(--muted);text-decoration:none;margin-right:16px}
+.nav a:hover{color:var(--text)}
+.langs{margin-bottom:20px;font-size:12px;color:var(--muted)}
+.langs a{color:var(--muted);text-decoration:none;margin-right:8px}
+.langs a.on{color:var(--text);font-weight:600}
+.langs a:hover{color:var(--text)}
+.step{display:flex;gap:14px;margin-top:14px}
+.num{width:28px;height:28px;border-radius:50%;background:#1a1c20;border:1px solid var(--border);display:grid;place-items:center;font-size:13px;font-weight:600;flex-shrink:0}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+th{text-align:left;color:var(--muted);font-weight:500;padding:8px;border-bottom:1px solid var(--border)}
+td{padding:8px;border-bottom:1px solid var(--border);color:#c3c6cd}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:32px}
+</style>
+</head>
+<body><div class="wrap">
+<div class="brand"><div class="logo">E</div>Eva</div>
+<div class="sub">Profesjonalny system ticketów dla Discorda</div>
+<div class="nav"><a href="index-pl.html">Strona główna</a><a href="documentation-pl.html">Dokumentacja</a><a href="terms-pl.html">Warunki korzystania</a><a href="privacy-pl.html">Polityka prywatności</a><a href="https://discord.gg/deGVPvnCpA" target="_blank" rel="noopener">Wsparcie</a></div>
+<div class="langs">🌐 <a href="documentation.html" class="">FR</a> <a href="documentation-en.html" class="">EN</a> <a href="documentation-es.html" class="">ES</a> <a href="documentation-de.html" class="">DE</a> <a href="documentation-it.html" class="">IT</a> <a href="documentation-pt.html" class="">PT</a> <a href="documentation-nl.html" class="">NL</a> <a href="documentation-pl.html" class="on">PL</a> <a href="documentation-ru.html" class="">RU</a> <a href="documentation-tr.html" class="">TR</a></div>
+<div class="card">
+<h1>Dokumentacja</h1>
+<p>Wszystko, co musisz wiedzieć o Evie — jako członek, staff lub administrator.</p>
+<h2>🎟️ Otwieranie ticketa (członkowie)</h2>
+<div class="step"><div class="num">1</div><p>Przejdź do kanału z panelem ticketów na serwerze.</p></div>
+<div class="step"><div class="num">2</div><p>Wybierz kategorię z rozwijanego menu (lub kliknij odpowiedni przycisk).</p></div>
+<div class="step"><div class="num">3</div><p>Wypełnij formularz (powód jest wymagany, minimum 10 znaków).</p></div>
+<div class="step"><div class="num">4</div><p>Tworzony jest prywatny kanał: widzisz go tylko ty i staff. Otrzymasz też wiadomość prywatną z bezpośrednim linkiem.</p></div>
+<p style="margin-top:12px">Po zamknięciu ticketa Eva poprosi cię w wiadomości prywatnej o ocenę od 1 do 5 ⭐.</p>
+<h2>🛠️ Zarządzanie ticketem (staff)</h2>
+<table>
+<tr><th>Przycisk</th><th>Działanie</th></tr>
+<tr><td>🙋 Claim / ↩️ Unclaim</td><td>Przejęcie (lub oddanie) odpowiedzialności za ticket.</td></tr>
+<tr><td>✏️ Zmień nazwę</td><td>Zmiana nazwy kanału ticketa.</td></tr>
+<tr><td>➕ / ➖ Członek</td><td>Dodanie lub usunięcie osoby z ticketa (po ID Discord).</td></tr>
+<tr><td>🔒 Zamknij</td><td>Zamyka ticket: transkrypcja archiwizowana, prośba o ocenę wysłana. Autor też może zamknąć swój ticket.</td></tr>
+<tr><td>🔓 Otwórz ponownie</td><td>Ponownie otwiera zamknięty ticket.</td></tr>
+<tr><td>📄 Transkrypcja</td><td>Generuje plik HTML rozmowy i wysyła go do logów.</td></tr>
+<tr><td>🗑️ Usuń</td><td>Archiwizuje transkrypcję i usuwa kanał.</td></tr>
+</table>
+<h3>Komendy staffu</h3>
+<p><span class="kbd">/note ajouter</span> — notatka wewnętrzna, niewidoczna dla autora ticketa.<br>
+<span class="kbd">/note liste</span> — wyświetla notatki ticketa.</p>
+<h2>⚙️ Konfiguracja Evy (administratorzy)</h2>
+<div class="step"><div class="num">1</div><p>Zaloguj się do panelu przez Discorda i wybierz swój serwer.</p></div>
+<div class="step"><div class="num">2</div><p><b>Kategorie</b>: typy ticketów (nazwa, emoji, kolor, role staffu, własny formularz do 5 pól).</p></div>
+<div class="step"><div class="num">3</div><p><b>Panele</b>: jeden lub więcej paneli (menu lub przyciski, licznik na żywo).</p></div>
+<div class="step"><div class="num">4</div><p><b>Logi</b>: jeden kanał na typ zdarzenia.</p></div>
+<div class="step"><div class="num">5</div><p><b>Ustawienia</b>: język, kolory, powitalna wiadomość prywatna, oceny, automatyczne zamykanie, role menedżerów.</p></div>
+<div class="step"><div class="num">6</div><p>Wpisz <span class="kbd">/panel</span> na wybranym kanale, aby opublikować panel.</p></div>
+<h2>❓ FAQ</h2>
+<h3>Nie mogę otworzyć drugiego ticketa</h3><p>Tylko jeden otwarty ticket na kategorię na osobę.</p>
+<h3>Staff nie dostaje powiadomień</h3><p>Sprawdź dozwolone role kategorii w panelu.</p>
+<h3>Mój ticket zamknął się sam</h3><p>Serwer włączył automatyczne zamykanie nieaktywnych ticketów.</p>
+<h3>Nie dostałem wiadomości z prośbą o ocenę</h3><p>Twoje wiadomości prywatne są prawdopodobnie wyłączone dla tego serwera.</p>
+<h3>Gdzie znajdę transkrypcje?</h3><p>Na kanale logów (plik HTML) i w panelu, zakładka Tickety.</p>
+<h2>💬 Potrzebujesz pomocy?</h2><p>Dołącz do <a href="https://discord.gg/deGVPvnCpA" target="_blank" rel="noopener">serwera wsparcia Evy</a>.</p>
+</div>
+<footer>Eva • System ticketów — ostatnia aktualizacja: lipiec 2026</footer>
+</div></body></html>

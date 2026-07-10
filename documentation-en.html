@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Documentation — Eva</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0d0f;--panel:#141518;--border:#26282e;--text:#eceef1;--muted:#8b8f98}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;min-height:100vh;line-height:1.7}
+.wrap{max-width:820px;margin:0 auto;padding:48px 20px}
+.brand{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:700;margin-bottom:8px}
+.logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#2a2d33,#17181b);border:1px solid var(--border);display:grid;place-items:center}
+.sub{color:var(--muted);font-size:14px;margin-bottom:16px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:32px}
+h1{font-size:26px;margin-bottom:4px}
+h2{font-size:16px;margin-top:22px;margin-bottom:6px}
+h3{font-size:14px;margin-top:16px;color:var(--text)}
+p{color:#c3c6cd;font-size:14px}
+a{color:var(--text)}
+code,.kbd{background:#1a1c20;border:1px solid var(--border);border-radius:6px;padding:2px 6px;font-size:.9em}
+.nav{margin-bottom:10px;font-size:14px}
+.nav a{color:var(--muted);text-decoration:none;margin-right:16px}
+.nav a:hover{color:var(--text)}
+.langs{margin-bottom:20px;font-size:12px;color:var(--muted)}
+.langs a{color:var(--muted);text-decoration:none;margin-right:8px}
+.langs a.on{color:var(--text);font-weight:600}
+.langs a:hover{color:var(--text)}
+.step{display:flex;gap:14px;margin-top:14px}
+.num{width:28px;height:28px;border-radius:50%;background:#1a1c20;border:1px solid var(--border);display:grid;place-items:center;font-size:13px;font-weight:600;flex-shrink:0}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+th{text-align:left;color:var(--muted);font-weight:500;padding:8px;border-bottom:1px solid var(--border)}
+td{padding:8px;border-bottom:1px solid var(--border);color:#c3c6cd}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:32px}
+</style>
+</head>
+<body><div class="wrap">
+<div class="brand"><div class="logo">E</div>Eva</div>
+<div class="sub">Professional Discord ticket system</div>
+<div class="nav"><a href="index-en.html">Home</a><a href="documentation-en.html">Documentation</a><a href="terms-en.html">Terms of Service</a><a href="privacy-en.html">Privacy Policy</a><a href="https://discord.gg/deGVPvnCpA" target="_blank" rel="noopener">Support</a></div>
+<div class="langs">🌐 <a href="documentation.html" class="">FR</a> <a href="documentation-en.html" class="on">EN</a> <a href="documentation-es.html" class="">ES</a> <a href="documentation-de.html" class="">DE</a> <a href="documentation-it.html" class="">IT</a> <a href="documentation-pt.html" class="">PT</a> <a href="documentation-nl.html" class="">NL</a> <a href="documentation-pl.html" class="">PL</a> <a href="documentation-ru.html" class="">RU</a> <a href="documentation-tr.html" class="">TR</a></div>
+<div class="card">
+<h1>Documentation</h1>
+<p>Everything you need to know to use Eva, whether you're a member, staff or administrator.</p>
+<h2>🎟️ Opening a ticket (members)</h2>
+<div class="step"><div class="num">1</div><p>Go to the server's ticket panel channel.</p></div>
+<div class="step"><div class="num">2</div><p>Pick a category from the dropdown menu (or click the matching button).</p></div>
+<div class="step"><div class="num">3</div><p>Fill in the form that opens (the reason is required, 10 characters minimum).</p></div>
+<div class="step"><div class="num">4</div><p>A private channel is created for you: only you and the staff can see it. You also receive a DM with the direct link.</p></div>
+<p style="margin-top:12px">When your ticket is closed, Eva asks you in DM for a 1 to 5 ⭐ rating.</p>
+<h2>🛠️ Managing a ticket (staff)</h2>
+<table>
+<tr><th>Button</th><th>Effect</th></tr>
+<tr><td>🙋 Claim / ↩️ Unclaim</td><td>Take (or release) responsibility for the ticket.</td></tr>
+<tr><td>✏️ Rename</td><td>Change the ticket channel's name.</td></tr>
+<tr><td>➕ / ➖ Member</td><td>Add or remove someone from the ticket (by Discord ID).</td></tr>
+<tr><td>🔒 Close</td><td>Closes the ticket: transcript archived, review request sent. The author can also close their own ticket.</td></tr>
+<tr><td>🔓 Reopen</td><td>Reopens a closed ticket.</td></tr>
+<tr><td>📄 Transcript</td><td>Generates an HTML file of the conversation and sends it to the logs.</td></tr>
+<tr><td>🗑️ Delete</td><td>Archives the transcript then deletes the channel.</td></tr>
+</table>
+<h3>Staff commands</h3>
+<p><span class="kbd">/note ajouter</span> — internal note invisible to the ticket author.<br>
+<span class="kbd">/note liste</span> — shows the ticket's notes.</p>
+<h2>⚙️ Configuring Eva (administrators)</h2>
+<div class="step"><div class="num">1</div><p>Log in to the Dashboard with Discord and pick your server.</p></div>
+<div class="step"><div class="num">2</div><p><b>Categories</b>: ticket types (name, emoji, color, staff roles, custom form with up to 5 fields).</p></div>
+<div class="step"><div class="num">3</div><p><b>Panels</b>: one or more panels (menu or buttons, live counter).</p></div>
+<div class="step"><div class="num">4</div><p><b>Logs</b>: one channel per event type.</p></div>
+<div class="step"><div class="num">5</div><p><b>Settings</b>: language, colors, welcome DM, reviews, auto-close, manager roles.</p></div>
+<div class="step"><div class="num">6</div><p>Type <span class="kbd">/panel</span> in the desired channel to publish the panel.</p></div>
+<h2>❓ FAQ</h2>
+<h3>I can't open a second ticket</h3><p>Only one open ticket per category per person.</p>
+<h3>Staff aren't notified</h3><p>Check the category's allowed roles in the Dashboard.</p>
+<h3>My ticket closed by itself</h3><p>The server enabled automatic closing of inactive tickets.</p>
+<h3>I didn't receive the review DM</h3><p>Your DMs are probably closed for this server.</p>
+<h3>Where are the transcripts?</h3><p>In the logs channel (HTML file) and in the Dashboard, Tickets tab.</p>
+<h2>💬 Need help?</h2><p>Join the <a href="https://discord.gg/deGVPvnCpA" target="_blank" rel="noopener">Eva support server</a>.</p>
+</div>
+<footer>Eva • Ticket system — last updated: July 2026</footer>
+</div></body></html>

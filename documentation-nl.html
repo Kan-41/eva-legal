@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Documentatie — Eva</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0d0f;--panel:#141518;--border:#26282e;--text:#eceef1;--muted:#8b8f98}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;min-height:100vh;line-height:1.7}
+.wrap{max-width:820px;margin:0 auto;padding:48px 20px}
+.brand{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:700;margin-bottom:8px}
+.logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#2a2d33,#17181b);border:1px solid var(--border);display:grid;place-items:center}
+.sub{color:var(--muted);font-size:14px;margin-bottom:16px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:32px}
+h1{font-size:26px;margin-bottom:4px}
+h2{font-size:16px;margin-top:22px;margin-bottom:6px}
+h3{font-size:14px;margin-top:16px;color:var(--text)}
+p{color:#c3c6cd;font-size:14px}
+a{color:var(--text)}
+code,.kbd{background:#1a1c20;border:1px solid var(--border);border-radius:6px;padding:2px 6px;font-size:.9em}
+.nav{margin-bottom:10px;font-size:14px}
+.nav a{color:var(--muted);text-decoration:none;margin-right:16px}
+.nav a:hover{color:var(--text)}
+.langs{margin-bottom:20px;font-size:12px;color:var(--muted)}
+.langs a{color:var(--muted);text-decoration:none;margin-right:8px}
+.langs a.on{color:var(--text);font-weight:600}
+.langs a:hover{color:var(--text)}
+.step{display:flex;gap:14px;margin-top:14px}
+.num{width:28px;height:28px;border-radius:50%;background:#1a1c20;border:1px solid var(--border);display:grid;place-items:center;font-size:13px;font-weight:600;flex-shrink:0}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+th{text-align:left;color:var(--muted);font-weight:500;padding:8px;border-bottom:1px solid var(--border)}
+td{padding:8px;border-bottom:1px solid var(--border);color:#c3c6cd}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:32px}
+</style>
+</head>
+<body><div class="wrap">
+<div class="brand"><div class="logo">E</div>Eva</div>
+<div class="sub">Professioneel ticketsysteem voor Discord</div>
+<div class="nav"><a href="index-nl.html">Home</a><a href="documentation-nl.html">Documentatie</a><a href="terms-nl.html">Gebruiksvoorwaarden</a><a href="privacy-nl.html">Privacybeleid</a><a href="https://discord.gg/deGVPvnCpA" target="_blank" rel="noopener">Support</a></div>
+<div class="langs">🌐 <a href="documentation.html" class="">FR</a> <a href="documentation-en.html" class="">EN</a> <a href="documentation-es.html" class="">ES</a> <a href="documentation-de.html" class="">DE</a> <a href="documentation-it.html" class="">IT</a> <a href="documentation-pt.html" class="">PT</a> <a href="documentation-nl.html" class="on">NL</a> <a href="documentation-pl.html" class="">PL</a> <a href="documentation-ru.html" class="">RU</a> <a href="documentation-tr.html" class="">TR</a></div>
+<div class="card">
+<h1>Documentatie</h1>
+<p>Alles wat je moet weten om Eva te gebruiken, of je nu lid, staff of beheerder bent.</p>
+<h2>🎟️ Een ticket openen (leden)</h2>
+<div class="step"><div class="num">1</div><p>Ga naar het ticketpaneel-kanaal van de server.</p></div>
+<div class="step"><div class="num">2</div><p>Kies een categorie in het dropdownmenu (of klik op de bijbehorende knop).</p></div>
+<div class="step"><div class="num">3</div><p>Vul het formulier in (de reden is verplicht, minimaal 10 tekens).</p></div>
+<div class="step"><div class="num">4</div><p>Er wordt een privékanaal aangemaakt: alleen jij en de staff kunnen het zien. Je ontvangt ook een DM met de directe link.</p></div>
+<p style="margin-top:12px">Bij het sluiten van je ticket vraagt Eva je via DM om een beoordeling van 1 tot 5 ⭐.</p>
+<h2>🛠️ Een ticket beheren (staff)</h2>
+<table>
+<tr><th>Knop</th><th>Effect</th></tr>
+<tr><td>🙋 Claim / ↩️ Unclaim</td><td>Verantwoordelijkheid voor het ticket nemen (of teruggeven).</td></tr>
+<tr><td>✏️ Hernoemen</td><td>De naam van het ticketkanaal wijzigen.</td></tr>
+<tr><td>➕ / ➖ Lid</td><td>Iemand toevoegen aan of verwijderen uit het ticket (via Discord-ID).</td></tr>
+<tr><td>🔒 Sluiten</td><td>Sluit het ticket: transcriptie gearchiveerd, beoordelingsverzoek verzonden. De auteur kan zijn eigen ticket ook sluiten.</td></tr>
+<tr><td>🔓 Heropenen</td><td>Heropent een gesloten ticket.</td></tr>
+<tr><td>📄 Transcriptie</td><td>Genereert een HTML-bestand van het gesprek en stuurt het naar de logs.</td></tr>
+<tr><td>🗑️ Verwijderen</td><td>Archiveert de transcriptie en verwijdert het kanaal.</td></tr>
+</table>
+<h3>Staff-commando's</h3>
+<p><span class="kbd">/note ajouter</span> — interne notitie, onzichtbaar voor de auteur van het ticket.<br>
+<span class="kbd">/note liste</span> — toont de notities van het ticket.</p>
+<h2>⚙️ Eva configureren (beheerders)</h2>
+<div class="step"><div class="num">1</div><p>Log in op het Dashboard met Discord en kies je server.</p></div>
+<div class="step"><div class="num">2</div><p><b>Categorieën</b>: tickettypes (naam, emoji, kleur, staffrollen, aangepast formulier met max. 5 velden).</p></div>
+<div class="step"><div class="num">3</div><p><b>Panelen</b>: één of meer panelen (menu of knoppen, live teller).</p></div>
+<div class="step"><div class="num">4</div><p><b>Logs</b>: één kanaal per gebeurtenistype.</p></div>
+<div class="step"><div class="num">5</div><p><b>Instellingen</b>: taal, kleuren, welkomst-DM, beoordelingen, automatisch sluiten, beheerdersrollen.</p></div>
+<div class="step"><div class="num">6</div><p>Typ <span class="kbd">/panel</span> in het gewenste kanaal om het paneel te publiceren.</p></div>
+<h2>❓ FAQ</h2>
+<h3>Ik kan geen tweede ticket openen</h3><p>Slechts één open ticket per categorie per persoon.</p>
+<h3>De staff wordt niet op de hoogte gebracht</h3><p>Controleer de toegestane rollen van de categorie in het Dashboard.</p>
+<h3>Mijn ticket is vanzelf gesloten</h3><p>De server heeft het automatisch sluiten van inactieve tickets ingeschakeld.</p>
+<h3>Ik heb geen beoordelings-DM ontvangen</h3><p>Je DM's staan waarschijnlijk uit voor deze server.</p>
+<h3>Waar vind ik de transcripties?</h3><p>In het logkanaal (HTML-bestand) en in het Dashboard, tabblad Tickets.</p>
+<h2>💬 Hulp nodig?</h2><p>Word lid van de <a href="https://discord.gg/deGVPvnCpA" target="_blank" rel="noopener">Eva-supportserver</a>.</p>
+</div>
+<footer>Eva • Ticketsysteem — laatst bijgewerkt: juli 2026</footer>
+</div></body></html>
